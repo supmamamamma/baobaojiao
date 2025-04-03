@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  cursor-to-openai:
+      image: ghcr.io/jiuz-chn/cursor-to-openai:latest
+      container_name: cursor-to-openai
+      ports:
+            - "127.0.0.1:8444:3010"
+      restart: always
+      networks:
+               - cursor
+
+networks:
+    cursor:
+      driver: bridge
