@@ -1,0 +1,22 @@
+{
+  "name": "baobaojiao",
+  "version": "1.0.0",
+  "description": "新版宝宝教程源于类脑Discord频道的群友的协作，以及旧版宝宝教程。 如各条目作者未进行单独说明，本教程采用CC BY-NC-SA 4.0许可协议。 参与新版宝宝教程编写：[见类脑新版宝宝教程区规定](https://discord.com/channels/1134557553011998840/1326502204223524939) ## 宝宝教程：https://down-3ud.pages.dev/",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
