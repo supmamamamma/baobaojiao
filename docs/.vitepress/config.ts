@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import admonition from 'markdown-it-admonition'
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -6,6 +7,14 @@ export default defineConfig({
   description: '类脑宝宝教程 VitePress 版',
   lastUpdated: true,
   cleanUrls: true,
+
+  // 启用对 MkDocs 风格的 !!! 提示块支持
+  markdown: {
+    config: (md) => {
+      md.use(admonition)
+    }
+  },
+
   themeConfig: {
     nav: [
       { text: '首页', link: '/' },

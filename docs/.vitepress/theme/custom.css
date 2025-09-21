@@ -1,0 +1,90 @@
+/* MkDocs-style admonition blocks (!!! note / warning / tip / etc.) */
+
+/* Base container */
+.admonition {
+  margin: 16px 0;
+  border-left: 4px solid var(--vp-c-divider);
+  background-color: var(--vp-c-bg-soft);
+  border-radius: 8px;
+  padding: 0.75em 1em;
+  overflow: hidden;
+}
+
+/* Title */
+.admonition .admonition-title {
+  font-weight: 600;
+  margin: 0 0 0.35em 0;
+  color: var(--vp-c-text-1);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+/* Paragraph spacing inside */
+.admonition p {
+  margin: 0.35em 0;
+}
+
+/* Lists inside */
+.admonition ul,
+.admonition ol {
+  margin: 0.35em 0 0.35em 1.25em;
+}
+
+/* Code blocks inside */
+.admonition pre {
+  margin: 0.5em 0;
+}
+
+/* Type colors */
+.admonition.note,
+.admonition.info {
+  border-color: var(--vp-c-brand-1);
+}
+
+.admonition.tip,
+.admonition.success {
+  border-color: #10b981; /* emerald-500 */
+}
+
+.admonition.warning,
+.admonition.caution {
+  border-color: #f59e0b; /* amber-500 */
+}
+
+.admonition.danger,
+.admonition.failure,
+.admonition.bug {
+  border-color: #ef4444; /* red-500 */
+}
+
+.admonition.example {
+  border-color: #06b6d4; /* cyan-500 */
+}
+
+.admonition.quote {
+  border-color: #8b5cf6; /* violet-500 */
+}
+
+/* Optional: subtle title accent bar */
+.admonition .admonition-title {
+  position: relative;
+  padding-left: 0.25em;
+}
+
+.admonition .admonition-title::before {
+  content: '';
+  position: absolute;
+  left: -1.05em;
+  top: 0.35em;
+  bottom: 0.35em;
+  width: 4px;
+  border-radius: 2px;
+  background: currentColor;
+  opacity: 0.25;
+}
+
+/* Dark mode contrast tweaks */
+.dark .admonition {
+  background-color: var(--vp-c-bg-soft);
+}
